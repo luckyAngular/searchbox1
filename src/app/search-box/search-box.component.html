@@ -1,0 +1,12 @@
+<div class="row" style="position: relative;">
+  <label>
+    <input placeholder="Enter your search here" #input type="text" autocomplete="off" (click)="itemList = []">
+  </label>
+  <button style="height: 2em; width: 6em; margin: 0 2em;" (click)=search(input.value)>Search</button>
+</div>
+<ul>
+  <li *ngFor="let item of itemList">
+    {{item.name}}
+  </li>
+</ul>
+
